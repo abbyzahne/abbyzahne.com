@@ -1,9 +1,11 @@
+
+
 /* font-family: 'Reenie Beanie', cursive;
 font-family: 'Cedarville Cursive', cursive;
 font-family: 'Lato', sans-serif;
  */
 
-* {
+ * {
     box-sizing: border-box;
 }
 
@@ -15,40 +17,34 @@ header {
     justify-content: center;
     text-align: center;
     align-items: center;
+    background-color: #8789c0;
 }
 
 body {
     margin: 0;
-    background-color: #edadc7
 }
 
 header h1 {
-    font-family: 'Montserrat', sans-serif;
+
     font-weight: 100;
     font-size: 25px;
     display: inline;
 }
 
-button {
-    border: none;
-    text-transform: uppercase;
-}
 
-ul {
-    list-style: none;
-    position: relative;
-    top: 120px;
-    
-}
-
-
-li { 
-    display: inline-block;
-    padding-right: 50px;  
-}
-
-.about-me {
+#about-me {
     height: 100vh;
+    background-color: #5b618a;
+}
+
+#projects {
+    height: 100vh;
+    background-color: #4f518c;
+}
+
+#contact {
+    height: 100vh;
+    background-color: #2c2a4a;
 }
 
 #full-name {
@@ -83,8 +79,8 @@ li {
 }
 
 #full-name path:nth-child(5){
-    stroke-dasharray: 395;
-    stroke-dashoffset: 395;
+    stroke-dasharray: 396;
+    stroke-dashoffset: 396;
     animation: line-animations 3s ease forwards 0.3s,
     fill 1s ease forwards 4s;
 }
@@ -141,6 +137,11 @@ li {
     }
     to {
         fill: white;
-        stroke-width: 2.5;
+        stroke-width: 4;
     }
 }
+
+
+
+
+

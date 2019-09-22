@@ -1,4 +1,4 @@
- * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,25 +7,12 @@
 header {
     width: 100%;
     height: 100vh;
-    margin: 0;
     display: flex;
     background-color: #ffffff;
 }
 
-.name {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    min-height: 25%;
-    }
-
-.inner
-{
+.inner {
     display: inline-block;
-    margin-left: 5px;
 }
 
 .links {
@@ -35,7 +22,8 @@ header {
     height: 60px;
     width: 100%;
     z-index: 1;
-    background-color: #ffffff
+    background-color: #ffffff;
+    white-space: nowrap;
 } 
 
 ul {
@@ -45,7 +33,6 @@ ul {
 li {
     margin-top: 15px;
     display: inline;
-
 }
 
 button {
@@ -60,17 +47,24 @@ button {
     background-color: transparent;
     border: transparent;
     outline: none;
-    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
 }  
+
+.name {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    min-height: 25%;
+}
  
 body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-}
-
-#intro {
-    height: 100vh;
 }
 
 #about-me {
@@ -82,12 +76,16 @@ body {
 .row {
     display: flex;
     justify-content: center;
-    position: relative;
-    
+    position: relative; 
 }
 
 .col-1 { 
     float: left;
+}
+
+.my-photo {
+    height: 550px;
+    margin: 15px;
 }
 
 .col-2 {
@@ -98,13 +96,30 @@ body {
     max-height: 600px;
 }
 
-.para {
-    height: 700px;
-    width: 600px;
-    overflow: hidden;
-    position: relative;
+.introduction {
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: bold;
+    color: #000000;
+    animation: typingEffect 3s steps(40) 1s 1 normal both,
+    blinkingCursor 500ms steps(40) infinite normal;
 }
 
+.typing {
+    width: 8em;
+    margin: 0 auto;
+    border-right: 2px solid #000000;
+    font-size: 150%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50);
+}
+
+.para {
+    height: 800px;
+    max-width: 600px;
+    position: relative;
+}
 
 .blurb {
     font-family: 'Karla', sans-serif;
@@ -115,12 +130,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
-.my-photo {
-    height: 550px;
-    margin: 15px;
-}
-
 
 #projects {
     display: flex;
@@ -135,8 +144,8 @@ body {
     color: #000000;
     font-size: 150%;
     text-align: center;
+    min-width: 600px;
 }
-
 
 #contact {
     height: 100vh;
@@ -153,7 +162,6 @@ body {
     justify-content: center;
     margin-bottom: 30px;
 }
-
 
 .baby-pic {
     max-width: 700px;
@@ -183,8 +191,6 @@ a {
     text-decoration: none;
 }
 
-
-
 @keyframes line-animations {
     to {
         stroke-dashoffset: 0;
@@ -195,31 +201,11 @@ a {
     from {
         fill: transparent;
         stroke-width: 0;
-
     }
     to {
         fill: white;
         stroke-width: 4;
     }
-}
-
-.introduction {
-    font-family: 'Anonymous Pro', monospace;
-    font-weight: bold;
-    color: #000000;
-    animation: typingEffect 3s steps(40) 1s 1 normal both,
-    blinkingCursor 500ms steps(40) infinite normal;
-}
-
-.typing {
-    width: 8em;
-    margin: 0 auto;
-    border-right: 2px solid #000000;
-    font-size: 150%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50);
 }
 
 @keyframes typingEffect {
@@ -240,17 +226,24 @@ a {
     }
 }
 
-/* mobile/tablets */
+/* mobile/tablets optimization*/
 @media screen and (max-width:1024px)  { 
-   #about-me {
-       height:700px;
+   #about-me, #projects, #contact {
+       height: 500px;
    }
 
-    .my-photo, .baby-pic {
+   .links {
+       height: 100px;
+   }
+
+   .col-2, .proj {
+       min-width: 400px;
+   }
+   
+   .my-photo, .baby-pic {
         display: none;
     }
-
-  }
+}
 
 
 

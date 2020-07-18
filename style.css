@@ -5,9 +5,6 @@
 }
 
 header {
-    width: 100%;
-    height: 100vh;
-    display: flex;
     background-color: #ffffff;
 }
 
@@ -51,15 +48,24 @@ button {
     margin-right: 20px;
 }  
 
-.name {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    min-height: 25%;
+#name-intro {
+    text-align: left;
+    position: relative;
+    top: 30%;
+    left: 10%;
+    font-size: 50px;
 }
+
+.hello, .more {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.more {
+    font-size: 30px;
+}
+
+
  
 body {
     margin: 0;
@@ -69,7 +75,7 @@ body {
 
 #about-me {
     margin: 150px 60px;
-    height: 100vh;
+    height: 10vh;
     min-height: 700px;
 }
 
@@ -84,8 +90,10 @@ body {
 }
 
 .my-photo {
-    height: 550px;
+    height: 330px;
     margin: 15px;
+    top: 60px;
+    position: relative;
 }
 
 .col-2 {
@@ -122,8 +130,8 @@ body {
 }
 
 .blurb {
-    font-family: 'Karla', sans-serif;
-    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     margin-top: 15px;
     margin-bottom: 30px;
     padding-left: 30px;
@@ -131,25 +139,172 @@ body {
     margin-right: auto;
 }
 
-#projects {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    min-height: 700px;
+.button {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
-.proj {
-    font-family: 'Anonymous Pro', monospace;
-    font-weight: bold;
-    color: #000000;
-    font-size: 150%;
-    text-align: center;
-    min-width: 600px;
+#projects {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 200px auto;
 }
+
+#projects .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #fff;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#projects .box .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#projects .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#projects .box .icon .net {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+#projects .box:hover .icon .net {
+    font-size: 40px;
+}
+
+#projects .box .icon .big {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+#projects .box .icon .plane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.plane {
+    width: 50%;
+}
+
+.big {
+    width: 50%;
+}
+
+.net {
+    height: 60%;
+}
+
+#projects .box .content {
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+#projects .box:hover .content {
+    top: 100px;
+    opacity: 1;
+
+}
+
+#projects .box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #000;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#projects .box .content p {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+#projects .box:nth-child(3) .icon {
+    background: #E50914
+}
+
+#projects .box:nth-child(3) {
+    background: #fff;
+}
+
+#projects .box:nth-child(4) .icon {
+    background: #ffb6c1
+}
+
+#projects .box:nth-child(4) {
+    background: #fff;
+}
+
+#projects .box:nth-child(5) .icon {
+    background: #d3d3d3;
+}
+
+#projects .box:nth-child(5) {
+    background: #fff;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.more {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 13px;
+}
+
 
 #contact {
-    height: 100vh;
-    min-height: 700px;
+    height: 20vh;
+    min-height: 20px;
 }
 
 .col {
@@ -160,25 +315,19 @@ body {
 
 .col-row-1 {
     justify-content: center;
-    margin-bottom: 30px;
-}
-
-.baby-pic {
-    max-width: 700px;
-    height: 400px;
-    margin-left: 30px;
+    margin-bottom: 10px;
 }
 
 .contact-me {
     font-family: 'Anonymous Pro', monospace;
     font-weight: bold;
     color: #000000;
-    font-size: 150%;
+    font-size: 18px;
     text-align: center;
 }
 
 .contact-info {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .gh, .ln, .email {
@@ -215,6 +364,7 @@ a {
     to {
         width: 8em;
     }
+    
 }
 
 @keyframes blinkingCursor {
@@ -240,10 +390,11 @@ a {
        min-width: 400px;
    }
    
-   .my-photo, .baby-pic {
-        display: none;
-    }
 }
+
+
+
+
 
 
 
